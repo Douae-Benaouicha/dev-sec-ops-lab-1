@@ -10,8 +10,8 @@ import json
 import sys
 import os
 
-TARGET_FILE = "../session1/app_vulnerable.py"
-SECURE_FILE = "../session1/app_secure.py"
+TARGET_FILE = "app_vulnerable.py"
+SECURE_FILE = "app_secure.py"
 BANDIT_CONFIG = ".bandit.yaml"
 
 def run_bandit(filepath: str, label: str) -> dict:
