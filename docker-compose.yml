@@ -7,8 +7,8 @@ services:
   # ─── Flask Application ──────────────────────────────────────────────────────
   web:
     build:
-      context: ../session1
-      dockerfile: ../session3/Dockerfile
+      context: .
+      dockerfile: Dockerfile
     image: devsecops-lab:latest
     container_name: lab_web
     restart: unless-stopped
@@ -31,7 +31,6 @@ services:
     # Security: Prevent privilege escalation
     security_opt:
       - no-new-privileges:true
-      - seccomp:seccomp_profile.json  # Custom seccomp profile
 
     # Resource limits (DoS protection)
     deploy:
