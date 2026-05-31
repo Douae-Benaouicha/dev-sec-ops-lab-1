@@ -26,3 +26,4 @@ jobs:
       - name: Execute SAST Vulnerability Gate
         run: |
           python sast_scan.py
+        working-directory: ./session2
